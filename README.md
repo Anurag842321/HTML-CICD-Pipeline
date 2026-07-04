@@ -137,7 +137,9 @@ The Jenkins pipeline consists of the following stages:
 1. Checkout Source Code
 - Pulls the latest source code from the GitHub repository.
 
-📷 **Screenshot:** `images/03-jenkins-checkout.png`
+### Jenkins Checkout
+
+![Jenkins Checkout](images/jenkins-checkout.png)
 
 ---
 
@@ -152,7 +154,7 @@ Example:
 933538/cu-project:latest
 ```
 
-📷 **Screenshot:** `images/04-docker-build.png`
+![Build Docker Image](images/docker-build.png)
 
 ---
 
@@ -160,7 +162,7 @@ Example:
 - Logs in to Docker Hub using Jenkins Credentials.
 - Pushes both the versioned image and the latest image to Docker Hub.
 
-📷 **Screenshot:** `images/05-dockerhub.png`
+![Docker Hub](images/dockerhub.png)
 
 ---
 
@@ -173,7 +175,7 @@ Example:
 image: 933538/cu-project:15
 ```
 
-📷 **Screenshot:** `images/06-update-deployment.png`
+![Update Deployment](images/update-deployment.png)
 
 ---
 
@@ -182,7 +184,7 @@ image: 933538/cu-project:15
 - Kubernetes automatically pulls the latest image from Docker Hub.
 - Performs a Rolling Update without downtime.
 
-📷 **Screenshot:** `images/07-deployment-success.png`
+![Kubernetes Deployment](images/deployment.png)
 
 ---
 
@@ -267,7 +269,7 @@ Jenkins Pipeline
 - Pipeline completed successfully
 - All stages executed without errors
 
-📷 **Screenshot:** `images/08-pipeline-success.png`
+![Pipeline Success](images/pipeline-success.png)
 
 ---
 
@@ -276,7 +278,7 @@ Docker Hub
 - Latest Docker image available
 - Versioned image available
 
-📷 **Screenshot:** `images/09-dockerhub-images.png`
+![Docker Hub Images](images/dockerhub-images.png)
 
 ---
 
@@ -286,7 +288,7 @@ Kubernetes Pods
 kubectl get pods -n anu
 ```
 
-📷 **Screenshot:** `images/10-pods.png`
+![Kubernetes Pods](images/pods.png)
 
 ---
 
@@ -296,8 +298,7 @@ Kubernetes Deployment
 kubectl get deployment -n anu
 ```
 
-📷 **Screenshot:** `images/11-deployment.png`
-
+![Kubernetes Deployment](images/deployment.png)
 ---
 
 Kubernetes Service
@@ -306,7 +307,7 @@ Kubernetes Service
 kubectl get svc -n anu
 ```
 
-📷 **Screenshot:** `images/12-service.png`
+![Kubernetes Service](images/service.png)
 
 ---
 
@@ -318,7 +319,7 @@ Access the application using:
 http://<NodeIP>:<NodePort>
 ```
 
-📷 **Screenshot:** `images/13-browser-output.png`
+![Application Output](images/browser-output.png)
 
 ---
 
@@ -367,7 +368,7 @@ During the implementation of this project, I encountered several real-world chal
 
 These challenges provided valuable practical experience in troubleshooting and implementing CI/CD pipelines.
 
----
+---`
 
 🔮 Future Enhancements
 
