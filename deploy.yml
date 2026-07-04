@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: anu
+  name: cu-deploy
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: devops
+      tier: frontend
+  template:
+    metadata:
+      labels:
+         app: devops
+         tier: frontend
+    spec:
+      containers:
+      - name: dev
+        image: 933538/cu-project:8
+        imagePullPolicy: Always
+        ports:
+         - containerPort: 80
+
+
